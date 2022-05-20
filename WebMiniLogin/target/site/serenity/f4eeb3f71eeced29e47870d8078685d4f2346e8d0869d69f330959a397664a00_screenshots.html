@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="eda9645ecea73214dea660b9d79f3beae2edb1bb1ee566a2476b38cd1d69a575.html">Login</a></span>
+                > <span class="truncate-60"><a
+                    href="f4eeb3f71eeced29e47870d8078685d4f2346e8d0869d69f330959a397664a00.html">Login scenario </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 20-05-2022 16:17</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Login </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a user<br />
+I want to login in AltaShop<br />
+So that I can access AltaShop
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Login scenario
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given I am on the login page<br>When I input "&lt;email&gt;" email<br>And I input "&lt;password&gt;" password<br>And click login button<br>Then I get the "&lt;result&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" 1: Login scenario ({email=imamrayhanekadinataa@gmail.com, password=rayhan1234, result=home page})" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Given I am on the login page" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Validate on login page" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Validate on login page (completed)" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Given I am on the login page (completed)" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" When I input &quot;imamrayhanekadinataa@gmail.com&quot; email" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Input email: imamrayhanekadinataa@gmail.com" width="1920"/>
+                <img src="b031a3594e6b2daaea5e8492a93402f159688d91b2a508b177982056fdbcd856.png" title=" Input email: imamrayhanekadinataa@gmail.com (completed)" width="1920"/>
+                <img src="b031a3594e6b2daaea5e8492a93402f159688d91b2a508b177982056fdbcd856.png" title=" When I input &quot;imamrayhanekadinataa@gmail.com&quot; email (completed)" width="1920"/>
+                <img src="b031a3594e6b2daaea5e8492a93402f159688d91b2a508b177982056fdbcd856.png" title=" And I input &quot;rayhan1234&quot; password" width="1920"/>
+                <img src="b031a3594e6b2daaea5e8492a93402f159688d91b2a508b177982056fdbcd856.png" title=" Input password: rayhan1234" width="1920"/>
+                <img src="3b5813535028d125ff81ff9f18dfab06b38790adadecee263ccaba4ec1cbe131.png" title=" Input password: rayhan1234 (completed)" width="1920"/>
+                <img src="3b5813535028d125ff81ff9f18dfab06b38790adadecee263ccaba4ec1cbe131.png" title=" And I input &quot;rayhan1234&quot; password (completed)" width="1920"/>
+                <img src="3b5813535028d125ff81ff9f18dfab06b38790adadecee263ccaba4ec1cbe131.png" title=" And click login button" width="1920"/>
+                <img src="3b5813535028d125ff81ff9f18dfab06b38790adadecee263ccaba4ec1cbe131.png" title=" Click login button" width="1920"/>
+                <img src="0dd1203ad3db5f10387eb4b0c0aa0a215f95e97fcea87d8be68dd1d9b6ddeb8d.png" title=" Click login button (completed)" width="1920"/>
+                <img src="0dd1203ad3db5f10387eb4b0c0aa0a215f95e97fcea87d8be68dd1d9b6ddeb8d.png" title=" And click login button (completed)" width="1920"/>
+                <img src="0dd1203ad3db5f10387eb4b0c0aa0a215f95e97fcea87d8be68dd1d9b6ddeb8d.png" title=" Then I get the &quot;home page&quot;" width="1920"/>
+                <img src="0dd1203ad3db5f10387eb4b0c0aa0a215f95e97fcea87d8be68dd1d9b6ddeb8d.png" title=" Header appears" width="1920"/>
+                <img src="ff00ba690739be4acbcf1e3cdfa445d4fe25ae2638928bf5ffc2891fe550e2e9.png" title=" Header appears (completed)" width="1920"/>
+                <img src="ff00ba690739be4acbcf1e3cdfa445d4fe25ae2638928bf5ffc2891fe550e2e9.png" title=" Header text equal" width="1920"/>
+                <img src="ff00ba690739be4acbcf1e3cdfa445d4fe25ae2638928bf5ffc2891fe550e2e9.png" title=" Header text equal (completed)" width="1920"/>
+                <img src="ff00ba690739be4acbcf1e3cdfa445d4fe25ae2638928bf5ffc2891fe550e2e9.png" title=" Then I get the &quot;home page&quot; (completed)" width="1920"/>
+                <img src="ff00ba690739be4acbcf1e3cdfa445d4fe25ae2638928bf5ffc2891fe550e2e9.png" title=" 1: Login scenario ({email=imamrayhanekadinataa@gmail.com, password=rayhan1234, result=home page}) (completed)" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" 2: Login scenario ({email=imamrayhanekadinataa@gmail.com, password=bocahtampan, result=login page})" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Given I am on the login page" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Validate on login page" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Validate on login page (completed)" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Given I am on the login page (completed)" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" When I input &quot;imamrayhanekadinataa@gmail.com&quot; email" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Input email: imamrayhanekadinataa@gmail.com" width="1920"/>
+                <img src="130605c19b9dfc9afd39a7a4e5362c6c6d8f06d4a7c24c0acb113a48bdfa94b4.png" title=" Input email: imamrayhanekadinataa@gmail.com (completed)" width="1920"/>
+                <img src="130605c19b9dfc9afd39a7a4e5362c6c6d8f06d4a7c24c0acb113a48bdfa94b4.png" title=" When I input &quot;imamrayhanekadinataa@gmail.com&quot; email (completed)" width="1920"/>
+                <img src="130605c19b9dfc9afd39a7a4e5362c6c6d8f06d4a7c24c0acb113a48bdfa94b4.png" title=" And I input &quot;bocahtampan&quot; password" width="1920"/>
+                <img src="130605c19b9dfc9afd39a7a4e5362c6c6d8f06d4a7c24c0acb113a48bdfa94b4.png" title=" Input password: bocahtampan" width="1920"/>
+                <img src="81ceecfd9bd04a759e2eb49b20f9dd61973565abcf806e1d9cb7b0beaef94c74.png" title=" Input password: bocahtampan (completed)" width="1920"/>
+                <img src="81ceecfd9bd04a759e2eb49b20f9dd61973565abcf806e1d9cb7b0beaef94c74.png" title=" And I input &quot;bocahtampan&quot; password (completed)" width="1920"/>
+                <img src="81ceecfd9bd04a759e2eb49b20f9dd61973565abcf806e1d9cb7b0beaef94c74.png" title=" And click login button" width="1920"/>
+                <img src="81ceecfd9bd04a759e2eb49b20f9dd61973565abcf806e1d9cb7b0beaef94c74.png" title=" Click login button" width="1920"/>
+                <img src="722b3ad0760b2d89131f9c2fa40759c477f3a49b144c462605c4b26ea811f6c8.png" title=" Click login button (completed)" width="1920"/>
+                <img src="722b3ad0760b2d89131f9c2fa40759c477f3a49b144c462605c4b26ea811f6c8.png" title=" And click login button (completed)" width="1920"/>
+                <img src="722b3ad0760b2d89131f9c2fa40759c477f3a49b144c462605c4b26ea811f6c8.png" title=" Then I get the &quot;login page&quot;" width="1920"/>
+                <img src="722b3ad0760b2d89131f9c2fa40759c477f3a49b144c462605c4b26ea811f6c8.png" title=" Error message appears" width="1920"/>
+                <img src="722b3ad0760b2d89131f9c2fa40759c477f3a49b144c462605c4b26ea811f6c8.png" title=" Error message appears (completed)" width="1920"/>
+                <img src="9172dd430fea4c5a6a55e47b632e1cb464fa2a6c8c70a8d7888de68605ef9bb7.png" title=" Error message equals: login page" width="1920"/>
+                <img src="9172dd430fea4c5a6a55e47b632e1cb464fa2a6c8c70a8d7888de68605ef9bb7.png" title=" Error message equals: login page (completed)" width="1920"/>
+                <img src="9172dd430fea4c5a6a55e47b632e1cb464fa2a6c8c70a8d7888de68605ef9bb7.png" title=" Then I get the &quot;login page&quot; (completed)" width="1920"/>
+                <img src="9172dd430fea4c5a6a55e47b632e1cb464fa2a6c8c70a8d7888de68605ef9bb7.png" title=" 2: Login scenario ({email=imamrayhanekadinataa@gmail.com, password=bocahtampan, result=login page}) (completed)" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" 3: Login scenario ({email=iniiseng@yahoo.com, password=rayhan1234, result=login page})" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Given I am on the login page" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Validate on login page" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Validate on login page (completed)" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Given I am on the login page (completed)" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" When I input &quot;iniiseng@yahoo.com&quot; email" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Input email: iniiseng@yahoo.com" width="1920"/>
+                <img src="0b18ad66318d0502e5175152c8f8a6914e85b5eb49134d42805e96b8070d731d.png" title=" Input email: iniiseng@yahoo.com (completed)" width="1920"/>
+                <img src="0b18ad66318d0502e5175152c8f8a6914e85b5eb49134d42805e96b8070d731d.png" title=" When I input &quot;iniiseng@yahoo.com&quot; email (completed)" width="1920"/>
+                <img src="0b18ad66318d0502e5175152c8f8a6914e85b5eb49134d42805e96b8070d731d.png" title=" And I input &quot;rayhan1234&quot; password" width="1920"/>
+                <img src="0b18ad66318d0502e5175152c8f8a6914e85b5eb49134d42805e96b8070d731d.png" title=" Input password: rayhan1234" width="1920"/>
+                <img src="edfa2ce21f86065726c9ab7d076a06056992e48fdeac518e6308cd0328f3acfa.png" title=" Input password: rayhan1234 (completed)" width="1920"/>
+                <img src="edfa2ce21f86065726c9ab7d076a06056992e48fdeac518e6308cd0328f3acfa.png" title=" And I input &quot;rayhan1234&quot; password (completed)" width="1920"/>
+                <img src="edfa2ce21f86065726c9ab7d076a06056992e48fdeac518e6308cd0328f3acfa.png" title=" And click login button" width="1920"/>
+                <img src="edfa2ce21f86065726c9ab7d076a06056992e48fdeac518e6308cd0328f3acfa.png" title=" Click login button" width="1920"/>
+                <img src="80183c96a29771d9832d2b5d5979fc8550ba5a3b84b739252286cf8219687168.png" title=" Click login button (completed)" width="1920"/>
+                <img src="80183c96a29771d9832d2b5d5979fc8550ba5a3b84b739252286cf8219687168.png" title=" And click login button (completed)" width="1920"/>
+                <img src="80183c96a29771d9832d2b5d5979fc8550ba5a3b84b739252286cf8219687168.png" title=" Then I get the &quot;login page&quot;" width="1920"/>
+                <img src="80183c96a29771d9832d2b5d5979fc8550ba5a3b84b739252286cf8219687168.png" title=" Error message appears" width="1920"/>
+                <img src="f173feca41a1a69f317dc70b0d42ddd4a303c71bc872d9158afb4ef4c79b2cc3.png" title=" Error message appears (completed)" width="1920"/>
+                <img src="f173feca41a1a69f317dc70b0d42ddd4a303c71bc872d9158afb4ef4c79b2cc3.png" title=" Error message equals: login page" width="1920"/>
+                <img src="f173feca41a1a69f317dc70b0d42ddd4a303c71bc872d9158afb4ef4c79b2cc3.png" title=" Error message equals: login page (completed)" width="1920"/>
+                <img src="f173feca41a1a69f317dc70b0d42ddd4a303c71bc872d9158afb4ef4c79b2cc3.png" title=" Then I get the &quot;login page&quot; (completed)" width="1920"/>
+                <img src="95fbd09df4b3f064202836d73d63196e3098f5aaeddb68d337f0fd1975d920a5.png" title=" 3: Login scenario ({email=iniiseng@yahoo.com, password=rayhan1234, result=login page}) (completed)" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" 4: Login scenario ({email=a, password=b, result=login page})" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Given I am on the login page" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Validate on login page" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Validate on login page (completed)" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Given I am on the login page (completed)" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" When I input &quot;a&quot; email" width="1920"/>
+                <img src="b625743ee732bdb87af642911c7f9583a57576024640458a3bdf0adf445bf9cb.png" title=" Input email: a" width="1920"/>
+                <img src="6905598735f1f5fad18d0122ca02044c01b31f3885b3560f79b65f03a72ae4a0.png" title=" Input email: a (completed)" width="1920"/>
+                <img src="6905598735f1f5fad18d0122ca02044c01b31f3885b3560f79b65f03a72ae4a0.png" title=" When I input &quot;a&quot; email (completed)" width="1920"/>
+                <img src="6905598735f1f5fad18d0122ca02044c01b31f3885b3560f79b65f03a72ae4a0.png" title=" And I input &quot;b&quot; password" width="1920"/>
+                <img src="6905598735f1f5fad18d0122ca02044c01b31f3885b3560f79b65f03a72ae4a0.png" title=" Input password: b" width="1920"/>
+                <img src="3c9cc537f730dc5fd1b87ca3bc639a9f5ce66e64abe0951ef595fa808ec5b681.png" title=" Input password: b (completed)" width="1920"/>
+                <img src="3c9cc537f730dc5fd1b87ca3bc639a9f5ce66e64abe0951ef595fa808ec5b681.png" title=" And I input &quot;b&quot; password (completed)" width="1920"/>
+                <img src="3c9cc537f730dc5fd1b87ca3bc639a9f5ce66e64abe0951ef595fa808ec5b681.png" title=" And click login button" width="1920"/>
+                <img src="3c9cc537f730dc5fd1b87ca3bc639a9f5ce66e64abe0951ef595fa808ec5b681.png" title=" Click login button" width="1920"/>
+                <img src="c6b737aa8d345f614cf9d0da72202658bc2a3596dab0aa8c29fef3fef992dfc2.png" title=" Click login button (completed)" width="1920"/>
+                <img src="c6b737aa8d345f614cf9d0da72202658bc2a3596dab0aa8c29fef3fef992dfc2.png" title=" And click login button (completed)" width="1920"/>
+                <img src="c6b737aa8d345f614cf9d0da72202658bc2a3596dab0aa8c29fef3fef992dfc2.png" title=" Then I get the &quot;login page&quot;" width="1920"/>
+                <img src="c6b737aa8d345f614cf9d0da72202658bc2a3596dab0aa8c29fef3fef992dfc2.png" title=" Error message appears" width="1920"/>
+                <img src="27c88592e741f5e182178346fa7cb79e2bbb7e8c3720f9f133645cfeaf3bcd55.png" title=" Error message appears (completed)" width="1920"/>
+                <img src="27c88592e741f5e182178346fa7cb79e2bbb7e8c3720f9f133645cfeaf3bcd55.png" title=" Error message equals: login page" width="1920"/>
+                <img src="27c88592e741f5e182178346fa7cb79e2bbb7e8c3720f9f133645cfeaf3bcd55.png" title=" Error message equals: login page (completed)" width="1920"/>
+                <img src="27c88592e741f5e182178346fa7cb79e2bbb7e8c3720f9f133645cfeaf3bcd55.png" title=" Then I get the &quot;login page&quot; (completed)" width="1920"/>
+                <img src="27c88592e741f5e182178346fa7cb79e2bbb7e8c3720f9f133645cfeaf3bcd55.png" title=" 4: Login scenario ({email=a, password=b, result=login page}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.1</span>
+</div>
+</body>
+</html>

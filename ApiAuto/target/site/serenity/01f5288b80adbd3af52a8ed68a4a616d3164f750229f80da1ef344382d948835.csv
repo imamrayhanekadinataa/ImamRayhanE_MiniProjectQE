@@ -1,0 +1,8 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Create Category","POST - Categories Create Category","SUCCESS","2022-05-20T16:27:46.921276+07:00[Asia/Jakarta]","0.0","4.16"
+"Get All Category","GET - All Category","SUCCESS","2022-05-20T16:27:46.9032723+07:00[Asia/Jakarta]","0.0","3.58"
+"Login","POST - Login","SUCCESS","2022-05-20T16:27:46.98067+07:00[Asia/Jakarta]","0.0","4.65"
+"Products","GET - As an admin I have to be able to get all products","SUCCESS","2022-05-20T16:27:46.7252493+07:00[Asia/Jakarta]","0.0","4.59"
+"Products","GET - As an admin I have to be able to get product by id","SUCCESS","2022-05-20T16:27:51.3222414+07:00[Asia/Jakarta]","0.0","1.29"
+"Products","POST - As an admin I have to be able to create new product","SUCCESS","2022-05-20T16:27:52.6175016+07:00[Asia/Jakarta]","0.0","1.18"
+"Register","POST- Register","SUCCESS","2022-05-20T16:27:46.9946723+07:00[Asia/Jakarta]","0.0","3.72"

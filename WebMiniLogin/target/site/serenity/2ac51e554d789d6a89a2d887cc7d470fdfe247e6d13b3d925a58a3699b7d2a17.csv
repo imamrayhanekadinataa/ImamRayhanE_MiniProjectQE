@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login","Login scenario","SUCCESS","2022-05-20T16:17:54.0475767+07:00[Asia/Jakarta]","0.0","32.26"
+"Logout","Logout Scenario","SUCCESS","2022-05-20T16:18:26.4938631+07:00[Asia/Jakarta]","0.0","7.51"
+"Product","Product scenario","SUCCESS","2022-05-20T16:18:34.032631+07:00[Asia/Jakarta]","0.0","6.92"
+"Register","Register scenario","SUCCESS","2022-05-20T16:18:41.0827202+07:00[Asia/Jakarta]","0.0","26.44"
+"Transaksi","Transaksi","SUCCESS","2022-05-20T16:19:07.5409292+07:00[Asia/Jakarta]","0.0","8.71"

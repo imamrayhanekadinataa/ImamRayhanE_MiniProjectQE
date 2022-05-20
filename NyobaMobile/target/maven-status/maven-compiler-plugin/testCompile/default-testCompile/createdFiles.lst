@@ -1,0 +1,5 @@
+com\example\acceptancetests\AcceptanceTestSuite.class
+com\example\steps\LoginSteps.class
+com\example\hooks\AndroidDriverHook.class
+com\example\steps\RegisterSteps.class
+com\example\steps\LogoutSteps.class

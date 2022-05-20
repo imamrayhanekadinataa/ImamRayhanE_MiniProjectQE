@@ -1,0 +1,14 @@
+Starter\Pages\RegisterPage.class
+Starter\product\Post.class
+Utils\General.class
+Starter\StepDefinitions\LoginStep.class
+Starter\CucumberTestSuite.class
+Starter\Pages\LoginPage.class
+Starter\StepDefinitions\RegisterStep.class
+Starter\Categories\getAllCategory.class
+Starter\Categories\createCategory.class
+Starter\StepDefinitions\getAllCategoryStep.class
+Starter\StepDefinitions\productSteps.class
+Starter\product\Get.class
+Starter\product\GetById.class
+Starter\StepDefinitions\createCategoryStep.class
